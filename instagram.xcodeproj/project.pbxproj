@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		801E05772621B220009A85A3 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801E05762621B220009A85A3 /* FeedCell.swift */; };
 		801E057A2621B2E2009A85A3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801E05792621B2E2009A85A3 /* Extensions.swift */; };
+		80B823A0262B63660019355D /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B8239F262B63660019355D /* CustomTextField.swift */; };
+		80B823A3262B6D0A0019355D /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B823A2262B6D0A0019355D /* AuthenticationViewModel.swift */; };
 		80E0B984261A437100E8308F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E0B983261A437100E8308F /* AppDelegate.swift */; };
 		80E0B986261A437100E8308F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E0B985261A437100E8308F /* SceneDelegate.swift */; };
 		80E0B98B261A437100E8308F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80E0B989261A437100E8308F /* Main.storyboard */; };
@@ -30,6 +32,8 @@
 		6BCFFF8D186916E813C268AD /* Pods-instagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instagram.debug.xcconfig"; path = "Target Support Files/Pods-instagram/Pods-instagram.debug.xcconfig"; sourceTree = "<group>"; };
 		801E05762621B220009A85A3 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		801E05792621B2E2009A85A3 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		80B8239F262B63660019355D /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		80B823A2262B6D0A0019355D /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		80E0B980261A437100E8308F /* instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80E0B983261A437100E8308F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80E0B985261A437100E8308F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -138,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				801E05762621B220009A85A3 /* FeedCell.swift */,
+				80B8239F262B63660019355D /* CustomTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -152,6 +157,7 @@
 		80E0B99F261A44D700E8308F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				80B823A2262B6D0A0019355D /* AuthenticationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -288,7 +294,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80B823A0262B63660019355D /* CustomTextField.swift in Sources */,
 				80E0B9A9261A462F00E8308F /* SearchViewController.swift in Sources */,
+				80B823A3262B6D0A0019355D /* AuthenticationViewModel.swift in Sources */,
 				80E0B9A2261A452800E8308F /* MainTabViewController.swift in Sources */,
 				80E0B984261A437100E8308F /* AppDelegate.swift in Sources */,
 				80E0B9AF261A464B00E8308F /* NotificationViewController.swift in Sources */,
