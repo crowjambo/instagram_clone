@@ -7,6 +7,14 @@ target 'instagram' do
 
   # Pods for instagram
   pod 'JGProgressHUD'
-
+  pod 'Firebase/Core'
+  pod 'Firebase/Database'
+  pod 'Firebase/Firestore'
+  pod 'Firebase/Storage'
+  pod 'Firebase/Messaging'
+  pod 'Firebase/Auth'
+  pod 'ActiveLabel'
+  pod 'SDWebImage'
+  pod 'YPImagePicker'
 
 end

@@ -35,6 +35,7 @@ class LoginViewController: UIViewController {
         button.setHeight(50)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
         button.isEnabled = false
+        button.addTarget(self, action: #selector(handleLogin), for: .touchUpInside)
         return button
     }()
     
@@ -106,6 +107,21 @@ class LoginViewController: UIViewController {
         }
         updateForm()
     }
+    
+    @objc func handleLogin() {
+        guard let email = emailTextField.text,
+              let password = passwordTextField.text else {
+            return
+        }
+        AuthService.loginUser(withEmail: email, password: password) { (result, error) in
+            if let error = error {
+                print("DEBUG: failed to login \(error.localizedDescription)")
+                return
+            }
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
 }
 
 // MARK: - EXTENSIONS

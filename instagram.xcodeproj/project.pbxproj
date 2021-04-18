@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		801E05772621B220009A85A3 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801E05762621B220009A85A3 /* FeedCell.swift */; };
 		801E057A2621B2E2009A85A3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801E05792621B2E2009A85A3 /* Extensions.swift */; };
+		806CE9F7262C0D6300B1DC53 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 806CE9F6262C0D6300B1DC53 /* GoogleService-Info.plist */; };
+		806CEA19262C14BF00B1DC53 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806CEA18262C14BF00B1DC53 /* ImageUploader.swift */; };
+		806CEA1C262C14C800B1DC53 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806CEA1B262C14C800B1DC53 /* AuthService.swift */; };
 		80B823A0262B63660019355D /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B8239F262B63660019355D /* CustomTextField.swift */; };
 		80B823A3262B6D0A0019355D /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B823A2262B6D0A0019355D /* AuthenticationViewModel.swift */; };
 		80E0B984261A437100E8308F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E0B983261A437100E8308F /* AppDelegate.swift */; };
@@ -32,6 +35,9 @@
 		6BCFFF8D186916E813C268AD /* Pods-instagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instagram.debug.xcconfig"; path = "Target Support Files/Pods-instagram/Pods-instagram.debug.xcconfig"; sourceTree = "<group>"; };
 		801E05762621B220009A85A3 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		801E05792621B2E2009A85A3 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		806CE9F6262C0D6300B1DC53 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		806CEA18262C14BF00B1DC53 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
+		806CEA1B262C14C800B1DC53 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		80B8239F262B63660019355D /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		80B823A2262B6D0A0019355D /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		80E0B980261A437100E8308F /* instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +111,7 @@
 				80E0B98C261A437200E8308F /* Assets.xcassets */,
 				80E0B98E261A437200E8308F /* LaunchScreen.storyboard */,
 				80E0B991261A437200E8308F /* Info.plist */,
+				806CE9F6262C0D6300B1DC53 /* GoogleService-Info.plist */,
 			);
 			path = instagram;
 			sourceTree = "<group>";
@@ -120,6 +127,8 @@
 		80E0B99A261A448700E8308F /* API */ = {
 			isa = PBXGroup;
 			children = (
+				806CEA18262C14BF00B1DC53 /* ImageUploader.swift */,
+				806CEA1B262C14C800B1DC53 /* AuthService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -240,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				80E0B990261A437200E8308F /* LaunchScreen.storyboard in Resources */,
+				806CE9F7262C0D6300B1DC53 /* GoogleService-Info.plist in Resources */,
 				80E0B98D261A437200E8308F /* Assets.xcassets in Resources */,
 				80E0B98B261A437100E8308F /* Main.storyboard in Resources */,
 			);
@@ -296,6 +306,7 @@
 			files = (
 				80B823A0262B63660019355D /* CustomTextField.swift in Sources */,
 				80E0B9A9261A462F00E8308F /* SearchViewController.swift in Sources */,
+				806CEA19262C14BF00B1DC53 /* ImageUploader.swift in Sources */,
 				80B823A3262B6D0A0019355D /* AuthenticationViewModel.swift in Sources */,
 				80E0B9A2261A452800E8308F /* MainTabViewController.swift in Sources */,
 				80E0B984261A437100E8308F /* AppDelegate.swift in Sources */,
@@ -308,6 +319,7 @@
 				80E0B9AC261A463800E8308F /* ImageSelectorViewController.swift in Sources */,
 				801E05772621B220009A85A3 /* FeedCell.swift in Sources */,
 				80FECEA02621BBC400952431 /* LoginViewController.swift in Sources */,
+				806CEA1C262C14C800B1DC53 /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -5,6 +5,7 @@ class RegistrationViewController: UIViewController{
     // MARK: - VIEWMODELS
     
     private var viewModel = RegistrationViewModel()
+    private var profileImage: UIImage?
     
     // MARK: - PROPERTIES
     
@@ -40,6 +41,7 @@ class RegistrationViewController: UIViewController{
         button.setHeight(50)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
         button.isEnabled = false
+        button.addTarget(self, action: #selector(handleSignUp), for: .touchUpInside)
         return button
     }()
     
@@ -118,6 +120,31 @@ class RegistrationViewController: UIViewController{
         present(picker, animated: true, completion: nil)
     }
     
+    @objc func handleSignUp() {
+        guard
+            let email = emailTextField.text,
+            let password = passwordTextField.text,
+            let fullName = fullNameTextField.text,
+            let userName = userNameTextField.text?.lowercased(),
+            let profileImage = profileImage
+        else {
+            return
+        }
+        let credentials = AuthCredentials(
+                email: email,
+                password: password,
+                fullName: fullName,
+                userName: userName,
+                profileImage: profileImage)
+        AuthService.registerUser(withCredentials: credentials, completion: {error in
+            if let error = error {
+                print("DEBUG: failed to register user \(error.localizedDescription)")
+                return
+            }
+            self.dismiss(animated: true, completion: nil)
+        })
+    }
+    
 }
 
 // MARK: - EXTENSIONS
@@ -133,6 +160,7 @@ extension RegistrationViewController: FormViewModel {
 extension RegistrationViewController: UIImagePickerControllerDelegate & UINavigationControllerDelegate  {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         guard let selectedImage = info[.editedImage] as? UIImage else { return }
+        self.profileImage = selectedImage
         plusPhotoButton.layer.cornerRadius = plusPhotoButton.frame.width / 2
         plusPhotoButton.layer.masksToBounds = true
         plusPhotoButton.layer.borderColor = UIColor.black.cgColor
